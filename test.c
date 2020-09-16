@@ -20,5 +20,5 @@
      if(e>x){
          x=e;
      }
-     printf("largest no is %d",x );
+     printf("Largest no is: %d",x );
  }
