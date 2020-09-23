@@ -1,7 +1,15 @@
 #include<stdio.h>
 void main(){
-    int a,b,c,sum;
-    sum=(a=8, b=7, c=9, a+b+c);
-    printf("sum=%d\n", sum);
+    int a;
+    printf("enter a number: ");
+    scanf("%d", &a);
+    if (a%2==0){
+        printf("a is even");
+    }
+    else{
+        printf("a is odd");
+        
+    }
 }
+    
 
