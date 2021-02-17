@@ -15,7 +15,7 @@ void main()
             odd++;
     }
     printf("even numbers =%d,odd numbers =%d\n", even, odd);
-    printf("the array elements are : \n");
+    printf("the  array elements are : \n");
     for (i = 0; i < 5; i++)
     {
         printf("%d\t", arr[i]);
