@@ -8,7 +8,9 @@ void main()
         printf("enter the temp: ");
         scanf("%d", &temp);
         if (temp < low)
+        {
             low = temp;
+        }
     }
 
     printf("the lowest temperature is %d", low);

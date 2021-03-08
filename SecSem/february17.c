@@ -1,3 +1,5 @@
+// WAP to find the multiple table of the given number
+
 #include <stdio.h>
 void main()
 {
