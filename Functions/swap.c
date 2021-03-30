@@ -1,16 +1,14 @@
 #include<stdio.h>
-int dowork(int a, int b, int*p);
-int main(){
-    int a, b, *p;
-    *p=a;
-    a=b; 
-    b=*p;
-
+int sum(int *p, int *q);
+void main(){
+    int a, b;
+    printf("enter the value : ");
+    scanf("%d %d", &a, &b);
+    printf("the sum is %d", sum(&a, &b));
 }
-int main(){
-    int a=10, b=20, *p;
-    dowork(a,b,  *p);
-    printf("the required value is %d and%d ", a,b );
+int sum(int *p, int *q){
+    int sum;
+    sum= *p+*q;
+    return sum;
 
-    
 }
