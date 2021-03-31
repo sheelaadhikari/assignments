@@ -1,3 +1,4 @@
+//write a program to find the sum of two variable using function.
 #include<stdio.h>
 int sum(int *p, int *q);
 void main(){
