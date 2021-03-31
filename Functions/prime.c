@@ -14,10 +14,11 @@ main(){
     
 }
 int prime(int n){
-    int num;
+    int num, flag=1;
    for(num=0; num<=sqrt(n); num++){
-     if(n%num==0)
-     prime(n);
-  
-    }
-    return num;
+     if(n%num==0){
+         flag=0;
+         break;
+    } 
+    return (flag);
+}
