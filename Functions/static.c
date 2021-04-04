@@ -15,4 +15,4 @@ static int b=30;
 printf("the value of a and b is %d and %d\n", a,b);
 a++;
 b++;
-}
+} 
