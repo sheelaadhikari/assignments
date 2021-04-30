@@ -1,5 +1,5 @@
 #include <stdio.h>
-void sum(int x, int y){
+int sum(int x, int y){
     int s;
     s=x+y;
     return s;
