@@ -22,4 +22,26 @@
     //printf("the number you entered is negative");
     //else
     //printf("error");
-//}
+
+
+    #include<stdio.h>
+    void main(){
+        int year;
+        printf("enter the number");
+        scanf("%d", &year);
+        if(year%100==0){
+           if(year%400==0)
+
+        
+        printf("leap year\n");
+        else
+        printf("not leap year");
+        }
+else
+{
+    if (year%4==0)
+    printf("leap year\n");
+    else
+    printf("not leap year");
+}  
+}
