@@ -1,17 +1,17 @@
 #include<stdio.h>
 void main(){
-    int x, y, z;
-    int i, n;
-    y=1;
-    printf("enter the number of terms: ");
-    scanf("%d", &n);
-    for(i=1; i<n; i++){
-        z=x+y;
-        printf("%d",z);
-        x=y;
-        y=x;
+   int n;
+for(n=1;n<=5;n++){
+    if(n==3){
+    printf("i understand");
+    break;
+    }
+    printf("number =%d\n",n);
 
 
     }
-    printf("\n");
+    printf("out");
 }
+
+
+
