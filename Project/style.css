@@ -1,0 +1,35 @@
+#heading-1 {
+    border: 2px solid black;
+    width: 50%;
+    height: 400px;
+    text-align: center;
+}
+
+#style-heading {
+    font-size: 50px;
+    color: blue;
+    padding: 30px 30px;
+    margin-top: auto;
+}
+
+#style-name {
+    font-size: 20px;
+    text-align: left;
+    padding: 30px 30px;
+}
+
+#style-pass {
+    font-size: 20px;
+    text-align: left;
+    padding: 30px 30px;
+}
+
+#style-log {
+    text-align: center;
+    background-color: rgb(54, 155, 202);
+    font-weight: bold;
+    padding: 10px 0 10px 0;
+    width: 10%;
+    margin: auto;
+    cursor: pointer;
+}
