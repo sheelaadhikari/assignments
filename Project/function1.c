@@ -13,5 +13,5 @@ void even( int n){
         
     }
     else
-    printf("error");
+    printf(" the number is odd ");
 }
