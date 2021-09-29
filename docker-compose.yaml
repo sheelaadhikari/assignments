@@ -1,35 +1,42 @@
-version: "3.7"
-
+version: "3"
 services:
-  php-server:
-    build:
-      dockerfile: .Dockerfile
-      context: .
+  #MySQL Database image
+  my_database:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: my_password_1234789
+      MYSQL_DATABASE: my_wp_database
+      MYSQL_USER: my_wp_user
+      MYSQL_PASSWORD: my_wp_user_password
+    volumes:
+      - mysql:/var/lib/mysql
+
+  #WordPress image based on Apache
+  wordpress:
+    depends_on:
+      - my_database
+    image: wordpress:latest
     restart: always
     ports:
-      - 8080:80
-    volumes:
-      - "./:/var/www/html"
-
-
-  mariadb:
-    image: mariadb:10.5.2
-    volumes:
-      - mariadb-volume:/var/lib/mysql
+      - "8000:80"
     environment:
-      TZ: "Europe/Rome"
-      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
-      MYSQL_ROOT_PASSWORD: "rootpwd"
-      MYSQL_USER: 'testuser' # username to login
-      MYSQL_PASSWORD: 'testpassword' # password to login
-      MYSQL_DATABASE: 'mydb'
-
+      WORDPRESS_DB_HOST: my_database:3306
+      WORDPRESS_DB_USER: my_wp_user
+      WORDPRESS_DB_PASSWORD: my_wp_user_password
+      WORDPRESS_DB_NAME: my_wp_database
+    volumes:
+      ["./:/var/www/html"]
   phpmyadmin:
+    depends_on:
+      - my_database
     image: phpmyadmin/phpmyadmin
-    links:
-      - 'mariadb:db'
+    restart: always
     ports:
-      - 8000:80
-
+      - '8080:80'
+    environment:
+      PMA_HOST: my_database
+      MYSQL_ROOT_PASSWORD: my_password_1234789
+      
 volumes:
-  mariadb-volume:
+  mysql: {}
